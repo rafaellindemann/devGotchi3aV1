@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [vida, setVida] = useState(60)
+  const [vida, setVida] = useState(100)
   const [vivo, setVivo] = useState(true)
-  const [saciedade, setSaciedade] = useState(10)
-  const [imagem, setImagem] = useState('/img/full.png')
+  const [saciedade, setSaciedade] = useState(100)
+  const [imagem, setImagem] = useState('/img/full2.png')
   useEffect(() => {
     const intervalo = setInterval(() => {
       if(vida <= 0){
@@ -36,11 +36,11 @@ function App() {
 
   function atualizarImagem(){
     if(vida > 20 && saciedade > 50){
-      setImagem('/img/full.png')
+      setImagem('/img/full2.png')
     }else if(vida < 20){
-      setImagem('/img/doente.png')
+      setImagem('/img/doente2.png')
     }else if(saciedade < 20){
-      setImagem('/img/fome.png')
+      setImagem('/img/fome2.png')
     }
   }
 
