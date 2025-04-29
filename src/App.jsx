@@ -4,6 +4,7 @@ import './App.css'
 function App() {
   const [vida, setVida] = useState(6)
   const [vivo, setVivo] = useState(true)
+  const [imagem, setImagem] = useState('/img/full.png')
   useEffect(() => {
     const intervalo = setInterval(() => {
       if(vida <= 0){
@@ -32,6 +33,9 @@ function App() {
 
   return (
     <>
+      <div>
+        <img src={imagem} alt="" className='imagem'/>
+      </div>
       <div>
         Vida: {vida}
 
