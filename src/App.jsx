@@ -1,6 +1,7 @@
+
+
 import { useEffect, useState } from 'react'
 import './App.css'
-
 function App() {
   const [vida, setVida] = useState(100)
   const [vivo, setVivo] = useState(true)
@@ -14,13 +15,10 @@ function App() {
         return 0
       }
       setVida((vidaAtual) => vidaAtual-1)
-
       atualizarImagem()
-      
     }, 500);
     return () => clearInterval(intervalo)
   },[vida])
-
   function curar(){
     if(vivo){
       if(vida <= 90){
@@ -33,7 +31,6 @@ function App() {
     }
     console.log(vida);
   }
-
   function atualizarImagem(){
     if(vida > 20 && saciedade > 50){
       setImagem('/img/full2.png')
@@ -43,7 +40,6 @@ function App() {
       setImagem('/img/fome2.png')
     }
   }
-
   return (
     <>
       <div>
